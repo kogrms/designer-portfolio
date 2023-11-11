@@ -1,73 +1,106 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;8..144,500;8..144,600&display=swap');
 
-body {
+button {
   margin: 0;
-  padding: 0;
-}
-section {
-  margin: 0;
-  padding: 0;
-}
-h1 {
-  margin: 0;
-  padding: 0;
-}
-h2 {
-  margin: 0;
-  padding: 0;
-}
-h3 {
-  margin: 0;
-  padding: 0;
-}
-div {
-  margin: 0;
-  padding: 0;
-}
-p {
-  margin: 0;
-  padding: 0;
-}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-li {
-  margin: 0;
-  padding: 0;
-}
-a {
-  margin: 0;
-  padding: 0;
-  color: #42b983;
-}
-
-.header1 {
-  font-weight: 400;
-}
-
-.header2 {
-  font-weight: 500;
-}
-
-.header3 {
-  font-weight: 600;
-}
-
-.app {
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto Flex", Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  background: #f8f9fc;
-}
-
-.main {
+  padding: 16px;
+  border-radius: 40px;
+  border: 1px solid #3A3E49;
+  color: #3A3E49;
+  background: #F8F9FC;
   font-size: 18px;
   font-style: normal;
-  line-height: 120%;
+  font-weight: 600;
+  line-height: 120%; /* 21.6px */
   letter-spacing: 0.36px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+button:hover {
+  background: #E6E6E8;
+}
+button:active {
+  background: #3A3E49;
+  color: #FFF;
+}
+
+.section {
+  overflow-y: scroll;
+  position: relative;
+  height: 100vh;
+
+  &:nth-of-type(1) {
+    background: #1C1F25;
+
+    .section-title {
+      bottom: 80px;
+      width: 59.2vw;
+    }
+  }
+  &:nth-of-type(2) {
+    background: #F8F9FC;
+
+    .section-title {
+      top: 90px;
+      width: 37.5vw;
+    }
+  }
+  &:nth-of-type(3) {
+    background: #EAEBF9;
+
+    .section-title {
+      top: 90px;
+      width: 62.2vw;
+    }
+  }
+  &:nth-of-type(4) {
+    background: #1C1F25;
+
+    .section-title {
+      top: 90px;
+      width: 54.8vw;
+    }
+  }
+}
+.section-title {
+  position: absolute;
+  left: 40px;
+  z-index: 10;
+}
+
+.navbar {
+  position: relative;
+  padding-top: 37px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 10;
+}
+
+.nav-button {
+  border: 1px solid #FFF;
+  color: #FFF;
+  background: #1C1F25;
+
+  &:nth-of-type(2) {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+.nav-button:hover {
+  background: #3A3E49;
+}
+
+.star-big {
+  position: absolute;
+  top: 0px;
+  left: -250px;
+  overflow: hidden;
+  z-index: 1;
+}
+.star-small {
+  position: absolute;
+  top: -250px;
+  right: -250px;
+  overflow: hidden;
+  z-index: 1;
 }

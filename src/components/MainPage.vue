@@ -1,9 +1,52 @@
 <template>
   <div class="main">
-    <div class="header1">{{ msg }}</div>
-    <div class="header2">{{ msg }}</div>
-    <div class="header3">{{ msg }}</div>
-    <p>
+    <!-- <section class="banner">{{ msg }}</section> -->
+    <section class="section">
+      <nav class="navbar">
+        <button class="nav-button" @click="scrollToSection('works')">
+          Works
+        </button>
+        <button class="nav-button" @click="scrollToSection('experience')">
+          Experience
+        </button>
+        <button class="nav-button" @click="scrollToSection('contacts')">
+          Contacts
+        </button>
+      </nav>
+      <img
+        class="section-title"
+        src="../assets/images/daria_fedorenko.svg"
+        alt="Daria Fedorenko"
+      />
+      <img
+        class="star-big"
+        src="../assets/images/star_big_pink.svg"
+        alt="Daria Fedorenko"
+      />
+      <img
+        class="star-small"
+        src="../assets/images/star_small_gray.svg"
+        alt="Daria Fedorenko"
+      />
+    </section>
+    <section class="section" id="works">
+      <img class="section-title" src="../assets/images/works.svg" alt="Works" />
+    </section>
+    <section class="section" id="experience">
+      <img
+        class="section-title"
+        src="../assets/images/experience.svg"
+        alt="Experience"
+      />
+    </section>
+    <section class="section" id="contacts">
+      <img
+        class="section-title"
+        src="../assets/images/contacts.svg"
+        alt="Contacts"
+      />
+    </section>
+    <!-- <p>
       For a guide and recipes on how to configure / customize this project,<br />
       check out the
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener"
@@ -84,7 +127,7 @@
           >awesome-vue</a
         >
       </li>
-    </ul>
+    </ul> -->
   </div>
 </template>
 
@@ -94,9 +137,18 @@ export default {
   props: {
     msg: String,
   },
+  methods: {
+    scrollToSection(sectionId) {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    },
+  },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<!-- <style scoped>
-</style> -->
+<style>
+/* .main {} */
+</style>
