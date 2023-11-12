@@ -1,0 +1,48 @@
+.content {
+  position: relative;
+  height: 300vh;
+  background-color: #F8F9FC;
+  color: #3A3E49;
+  font-size: 0.24em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+.sidebar {
+  position: fixed;
+  width: calc(31.7vw - (2 * 2.8vw));
+  height: 100vh;
+  padding: 2.8vw;
+  text-align: left;
+  font-size: 2vw;
+  font-style: normal;
+  line-height: 120%;
+  font-weight: 500;
+  letter-spacing: 2.1px;
+  background-color: #3A3E49;
+  color: #FFF;
+}
+.sidebar-button {
+  padding: 1vw;
+  font-size: 1.2vw;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 2%;
+  background-color: #3A3E49;
+  color: #FFF;
+  border-color: #FFF;
+}
+.sidebar-button:hover {
+  background-color: #4D5260;
+}
+.sidebar-heading {
+  margin-top: 58px;
+}
+.sidebar-year {
+  margin-top: 32px;
+  opacity: 0.4;
+}
+.navbar-sidebar {
+  position: fixed;
+  bottom: 40px;
+}

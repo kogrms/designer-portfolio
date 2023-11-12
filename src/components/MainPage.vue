@@ -76,12 +76,15 @@
         </button>
       </div>
       <div class="cards">
+        <!-- <router-link
+        :to="{ name: 'works', params: { card: card } }" -->
         <div
           class="card"
           v-for="(cardData, card) in tabsCards[selectedTab]"
           :key="card"
           @mouseover="hoveredCard = card"
           @mouseout="hoveredCard = null"
+          @click="navigateToCard(card)"
         >
           <div class="card-year">{{ cardData.year }}</div>
           <div class="card-image-wrap">
@@ -100,6 +103,7 @@
           </div>
           <div class="">{{ card }}</div>
         </div>
+        <!-- </router-link> -->
       </div>
     </section>
     <section class="section" id="experience">
@@ -204,6 +208,7 @@
 <script>
 // import { debounce } from "lodash";
 import { tabsCards } from "./../config/config";
+import router from "./../router.js";
 
 export default {
   name: "MainPage",
@@ -227,14 +232,23 @@ export default {
     selectTab(tab) {
       this.selectedTab = tab;
     },
+    navigateToCard(card) {
+      router.push({
+        name: "card",
+        params: { tab: this.selectedTab, card: card },
+      });
+    },
   },
   mounted() {
-    console.log(this.tabsCards);
+    // console.log(this.tabsCards);
+    if (this.$route.params.tab) {
+      this.selectTab(this.$route.params.tab);
+      console.log(this.$route.params.tab);
+    }
+    if (this.$route.params.section) {
+      this.scrollToSection(this.$route.params.section);
+      console.log(this.$route.params.section);
+    }
   },
 };
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
-/* .main {} */
-</style>
