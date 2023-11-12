@@ -31,6 +31,70 @@
     </section>
     <section class="section" id="works">
       <img class="section-title" src="../assets/images/works.svg" alt="Works" />
+      <div class="tabs">
+        <button
+          class="tab"
+          :class="{ active: selectedTab === 'product' }"
+          @click="selectTab('product')"
+        >
+          Продуктовые кейсы
+        </button>
+        <button
+          class="tab"
+          :class="{ active: selectedTab === 'web' }"
+          @click="selectTab('web')"
+        >
+          ВЕБ дизайн
+        </button>
+        <button
+          class="tab"
+          :class="{ active: selectedTab === 'communication' }"
+          @click="selectTab('communication')"
+        >
+          коммуникационный дизайн
+        </button>
+        <button
+          class="tab"
+          :class="{ active: selectedTab === 'graphic' }"
+          @click="selectTab('graphic')"
+        >
+          графический дизайн
+        </button>
+        <button
+          class="tab"
+          :class="{ active: selectedTab === 'motion' }"
+          @click="selectTab('motion')"
+        >
+          motion
+        </button>
+        <button
+          class="tab"
+          :class="{ active: selectedTab === 'presentation' }"
+          @click="selectTab('presentation')"
+        >
+          дизайн презентаций
+        </button>
+      </div>
+      <div class="cards">
+        <div
+          class="card"
+          v-for="(cardData, card) in tabsCards[selectedTab]"
+          :key="card"
+          @mouseover="hoveredCard = card"
+          @mouseout="hoveredCard = null"
+        >
+          <div class="card-year">{{ cardData.year }}</div>
+          <div class="card-image-wrap">
+            <img
+              class="card-image"
+              :class="{ hovered: hoveredCard === card }"
+              :src="require(`../assets/images/cards/${cardData.image}.png`)"
+            />
+          </div>
+          <div class="card-title">{{ cardData.title }}</div>
+          <div class="">{{ card }}</div>
+        </div>
+      </div>
     </section>
     <section class="section" id="experience">
       <img
@@ -132,11 +196,21 @@
 </template>
 
 <script>
+// import { debounce } from "lodash";
+import { tabsCards } from "./../config/config";
+
 export default {
   name: "MainPage",
-  props: {
-    msg: String,
+  data() {
+    return {
+      selectedTab: "product",
+      tabsCards: tabsCards,
+      hoveredCard: null,
+    };
   },
+  // props: {
+  //   msg: String,
+  // },
   methods: {
     scrollToSection(sectionId) {
       const element = document.getElementById(sectionId);
@@ -144,6 +218,12 @@ export default {
         element.scrollIntoView({ behavior: "smooth" });
       }
     },
+    selectTab(tab) {
+      this.selectedTab = tab;
+    },
+  },
+  mounted() {
+    console.log(this.tabsCards);
   },
 };
 </script>

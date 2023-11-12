@@ -1,0 +1,60 @@
+.tabs {
+  margin-top: 18.2vw;
+  display: flex;
+  justify-content: space-between;
+  /* gap: auto; */
+}
+.tab {
+  &.active {
+    background: #3A3E49;
+    color: #FFF;
+  }
+}
+.cards {
+  margin-top: 60px;
+  display: flex;
+  gap: 16px;
+  justify-content: flex-start;
+}
+.card {
+  position: relative;
+  width: calc((100vw - (80px + (16px * 3))) / 4);
+  cursor: pointer;
+}
+.card-image-wrap {
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+}
+.card-image {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: calc(((100vw - (80px + (16px * 3))) / 4) * 0.77);
+  background: #F8F9FC;
+  transition: transform 0.3s ease;
+}
+/* .card-image:hover {
+  transform: scale(1.05);
+} */
+.hovered {
+  transform: scale(1.07);
+}
+.card-year {
+  position: absolute;
+  top: 13px;
+  left: 12px;
+  padding: 6px 12px;
+  border-radius: 30px;
+  border: 1px solid #3A3E49;
+  color: #3A3E49;
+  font-size: 0.16em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+.card-title {
+  margin-top: 12px;
+  font-size: 0.18em;
+  text-align: left;
+}

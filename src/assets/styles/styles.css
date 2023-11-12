@@ -1,17 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;8..144,500;8..144,600&display=swap');
 
+@import url(./cover.css);
+@import url(./works.css);
+
+body,
+section,
+h1,
+h2,
+h3,
+div,
+p,
+ul,
+li,
+a,
+img,
+nav {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style-type: none;
+}
+html {
+  font-size: 6.944vw;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+
 button {
   margin: 0;
-  padding: 16px;
+  padding: 1.1vw;
   border-radius: 40px;
   border: 1px solid #3A3E49;
   color: #3A3E49;
   background: #F8F9FC;
-  font-size: 18px;
+  /* font-size: 1.2vw; */
+  font-size: 0.18em;
+  /* font-size: max(18px); */
   font-style: normal;
   font-weight: 600;
   line-height: 120%; /* 21.6px */
-  letter-spacing: 0.36px;
+  /* letter-spacing: 0.36px; */
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -23,13 +54,22 @@ button:active {
   color: #FFF;
 }
 
-.section {
+.app {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Flex", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
   overflow-y: scroll;
+}
+.section {
+  overflow: hidden;
   position: relative;
-  height: 100vh;
 
   &:nth-of-type(1) {
     background: #1C1F25;
+    height: 100vh;
 
     .section-title {
       bottom: 80px;
@@ -37,7 +77,12 @@ button:active {
     }
   }
   &:nth-of-type(2) {
+    /* height: 800px; */
     background: #F8F9FC;
+    /* padding-top: 34vh; */
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 80px;
 
     .section-title {
       top: 90px;
@@ -45,6 +90,7 @@ button:active {
     }
   }
   &:nth-of-type(3) {
+    height: 800px;
     background: #EAEBF9;
 
     .section-title {
@@ -53,6 +99,7 @@ button:active {
     }
   }
   &:nth-of-type(4) {
+    height: 800px;
     background: #1C1F25;
 
     .section-title {
@@ -65,42 +112,4 @@ button:active {
   position: absolute;
   left: 40px;
   z-index: 10;
-}
-
-.navbar {
-  position: relative;
-  padding-top: 37px;
-  margin-left: auto;
-  margin-right: auto;
-  z-index: 10;
-}
-
-.nav-button {
-  border: 1px solid #FFF;
-  color: #FFF;
-  background: #1C1F25;
-
-  &:nth-of-type(2) {
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-}
-
-.nav-button:hover {
-  background: #3A3E49;
-}
-
-.star-big {
-  position: absolute;
-  top: 0px;
-  left: -250px;
-  overflow: hidden;
-  z-index: 1;
-}
-.star-small {
-  position: absolute;
-  top: -250px;
-  right: -250px;
-  overflow: hidden;
-  z-index: 1;
 }
