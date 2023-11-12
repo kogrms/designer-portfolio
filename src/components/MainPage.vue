@@ -91,7 +91,13 @@
               :src="require(`../assets/images/cards/${cardData.image}.png`)"
             />
           </div>
-          <div class="card-title">{{ cardData.title }}</div>
+          <div class="card-title-row">
+            <p class="card-title">{{ cardData.title }}</p>
+            <div
+              class="card-arrow"
+              :class="{ hovered: hoveredCard === card }"
+            ></div>
+          </div>
           <div class="">{{ card }}</div>
         </div>
       </div>
