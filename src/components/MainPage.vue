@@ -101,7 +101,6 @@
               :class="{ hovered: hoveredCard === card }"
             ></div>
           </div>
-          <div class="">{{ card }}</div>
         </div>
         <!-- </router-link> -->
       </div>
@@ -241,13 +240,13 @@ export default {
   },
   mounted() {
     // console.log(this.tabsCards);
-    if (this.$route.params.tab) {
-      this.selectTab(this.$route.params.tab);
-      console.log(this.$route.params.tab);
-    }
     if (this.$route.params.section) {
       this.scrollToSection(this.$route.params.section);
       console.log(this.$route.params.section);
+    }
+    if (this.$route.params.tab) {
+      this.selectTab(this.$route.params.tab);
+      console.log(this.$route.params.tab);
     }
   },
 };
