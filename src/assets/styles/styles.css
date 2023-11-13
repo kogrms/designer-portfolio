@@ -91,7 +91,7 @@ button:active {
     }
   }
   &:nth-of-type(3) {
-    height: 800px;
+    height: 100vh;
     background: #EAEBF9;
 
     .section-title {
@@ -100,7 +100,7 @@ button:active {
     }
   }
   &:nth-of-type(4) {
-    height: 800px;
+    height: 100vh;
     background: #1C1F25;
 
     .section-title {

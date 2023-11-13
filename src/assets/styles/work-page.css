@@ -1,6 +1,10 @@
-.content {
+.work {
   position: relative;
-  height: 300vh;
+}
+.content {
+  /* position: relative; */
+  min-height: 100vh;
+  padding-left: calc(31.7vw);
   background-color: #F8F9FC;
   color: #3A3E49;
   font-size: 0.24em;

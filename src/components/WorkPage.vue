@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div class="work">
     <div class="sidebar">
       <button class="sidebar-button" @click="returnToMain()">&lt; назад</button>
       <div class="sidebar-heading">
@@ -28,6 +28,12 @@
           Contacts
         </button>
       </nav>
+    </div>
+    <div class="content">
+      <div class="">1234</div>
+      <div class="">1234</div>
+      <div class="">1234</div>
+      <div class="">1234</div>
     </div>
   </div>
 </template>
