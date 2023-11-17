@@ -1,5 +1,7 @@
 .work {
   position: relative;
+  font-size: 0;
+  line-height: 0;
 }
 .sidebar {
   position: fixed;
@@ -29,7 +31,7 @@
   background-color: #4D5260;
 }
 .sidebar-heading {
-  margin-top: 58px;
+  margin-top: 3vw;
 }
 .sidebar-year {
   margin-top: 32px;
@@ -42,7 +44,9 @@
 .content {
   /* position: relative; */
   min-height: 100vh;
-  padding-left: calc(31.7vw);
+  margin-left: calc(31.7vw);
+  padding-top: 9.5vw;
+  padding-bottom: 9.5vw;
   background-color: #F8F9FC;
   color: #3A3E49;
   font-size: 0.24em;
@@ -50,12 +54,46 @@
   font-weight: 400;
   line-height: 120%;
 }
+.inner-content {
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
 .video-container {
-  /* width: 100%; */
+  width: 100%;
   position: relative;
+  border-radius: 36.259px;
   overflow: hidden;
 }
 video {
   width: 100%;
   height: auto;
+}
+.image-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.work-image {
+  width: 100%;
+  height: auto;
+}
+.text-container {
+  width: 100%;
+}
+.work-text {
+  width: 100%;
+  font-size: 1.6vw;
+  line-height: 120%;
+  color: #3A3E49;
+  margin-top: calc(2.2vw - 8px);
+  margin-bottom: calc(2.7vw - 8px);
+  text-align: left;
+}
+.nest-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }

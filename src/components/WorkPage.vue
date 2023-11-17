@@ -30,46 +30,72 @@
       </nav>
     </div>
     <div class="content">
-      <div
-        class=""
-        v-for="(work, index) in pageData.workData"
-        :key="index"
-        @click="() => {}"
-      >
+      <div class="inner-content">
         <div
-          v-if="work.type === 'video'"
-          class="video-container"
-          :style="{ width: `calc(${work.width} * 100vw)` }"
+          v-for="(work, index) in pageData.workData"
+          :key="index"
+          @click="() => {}"
+          :class="{
+            'video-container': work.type === 'video',
+            'image-container': work.type === 'image',
+            'text-container': work.type === 'text',
+          }"
+          :style="{ width: `calc(${work.width} * 100%)` }"
         >
-          <video autoplay loop muted playsinline>
+          <video v-if="work.type === 'video'" autoplay loop muted playsinline>
             <source
-              :src="`../../assets/works/graphic/tiger/${work.content}`"
+              :src="
+                require(`../assets/works/${tabName}/${pageName}/${work.content}.mp4`)
+              "
               type="video/mp4"
             />
           </video>
+          <img
+            v-else-if="work.type === 'image'"
+            :src="
+              require(`../assets/works/${tabName}/${pageName}/${work.content}.png`)
+            "
+            class="work-image"
+          />
+          <p
+            v-else-if="work.type === 'text'"
+            class="work-text"
+            v-html="work.content"
+          ></p>
+          <div v-else-if="work.type === 'container'" class="nest-container">
+            <div
+              v-for="(block, i) in work.content"
+              :key="i"
+              :class="{
+                'video-container': block.type === 'video',
+                'image-container': block.type === 'image',
+              }"
+              :style="{ width: `calc(${block.width} * 100%)` }"
+            >
+              <video
+                v-if="block.type === 'video'"
+                autoplay
+                loop
+                muted
+                playsinline
+              >
+                <source
+                  :src="
+                    require(`../assets/works/${tabName}/${pageName}/${block.content}.mp4`)
+                  "
+                  type="video/mp4"
+                />
+              </video>
+              <img
+                v-else-if="block.type === 'image'"
+                :src="
+                  require(`../assets/works/${tabName}/${pageName}/${block.content}.png`)
+                "
+                class="work-image"
+              />
+            </div>
+          </div>
         </div>
-        <div
-          v-else-if="work.type === 'image'"
-          class=""
-          :style="{ width: `calc(${work.width} * 100vw)` }"
-        >
-          <!-- <img
-            class="card-image"
-            :class="{ hovered: hoveredCard === card }"
-            :src="require(`${work.content}`)"
-          /> -->
-          <img :src="`./../assets/works/graphic/tiger/${work.content}`" />
-        </div>
-        <!-- <div
-          class=""
-          style="
-             {
-              width: calc();
-            }
-          "
-        >
-          {{ work[index].content }}
-        </div> -->
       </div>
     </div>
   </div>
@@ -98,7 +124,7 @@ export default {
     returnToMain() {
       router.push({
         name: "home",
-        params: { tab: this.tabName },
+        params: { tab: this.tabName, section: "works" },
       });
     },
     toMainAndScroll(section) {
@@ -110,6 +136,7 @@ export default {
   },
   mounted() {
     // console.log(this.tabsCards);
+    window.scrollTo(0, 0);
   },
 };
 </script>

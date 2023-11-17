@@ -67,14 +67,24 @@ export const tabsCards = {
       image: "12",
       workData: [
         {
-          type: "image",
-          width: 0.333,
-          content: "tiger_1.png",
+          type: "video",
+          width: 0.345,
+          content: "graphic_tiger",
         },
         {
-          type: "video",
-          width: 0.333,
-          content: "graphic_tiger.mp4",
+          type: "image",
+          width: 0.645,
+          content: "tiger_1",
+        },
+        {
+          type: "image",
+          width: 1,
+          content: "tiger_2",
+        },
+        {
+          type: "image",
+          width: 1,
+          content: "tiger_3",
         },
       ],
     },
@@ -82,16 +92,79 @@ export const tabsCards = {
       year: "2022",
       title: "Мерч для сотрудников Мультибонуса",
       image: "13",
+      workData: [
+        {
+          type: "image",
+          width: 1,
+          content: "workers_1",
+        },
+        {
+          type: "image",
+          width: 0.607,
+          content: "workers_2",
+        },
+        {
+          type: "image",
+          width: 1,
+          content: "workers_3",
+        },
+      ],
     },
     posters: {
       year: "2022",
       title: "Постеры для офиса Мультибонуса",
       image: "14",
+      workData: [
+        {
+          type: "image",
+          width: 1,
+          content: "posters_1",
+        },
+        {
+          type: "text",
+          width: 1,
+          content:
+            "Постеры для офиса создавались вместе с командой scrum-мастеров и отражают ценности компании. ",
+        },
+        {
+          type: "image",
+          width: 1,
+          content: "posters_2",
+        },
+        {
+          type: "image",
+          width: 1,
+          content: "posters_3",
+        },
+      ],
     },
     illustrations: {
       year: "2023",
       title: "Бренд 3d иллюстрации для Мультибонуса",
       image: "15",
+      workData: [
+        {
+          type: "image",
+          width: 1,
+          content: "illustrations_1",
+        },
+        {
+          type: "text",
+          width: 1,
+          content:
+            "В рамках проекта ребрендинга главной страницы сайта multibonus.ru была создана система 3d иллюстраций. Стиль иллюстраций является консистентным для экосистемы ВТБ, но позволил создавать свой уникальный “голос” для программы лояльности Мультибонус.<br/>Стиль 3d иллюстраций давно стал трнендом среди fintech брендов, поэтому использование этого подхода легло в основу этого проекта.",
+        },
+        {
+          type: "image",
+          width: 1,
+          content: "illustrations_2",
+        },
+        {
+          type: "image",
+          width: 1,
+          content: "illustrations_3",
+        },
+      ],
     },
   },
   motion: {
@@ -99,6 +172,18 @@ export const tabsCards = {
       year: "2023",
       title: "Брендированные эмодзи для Telegram",
       image: "16",
+      workData: [
+        {
+          type: "image",
+          width: 0.495,
+          content: "telegram_1",
+        },
+        {
+          type: "video",
+          width: 0.495,
+          content: "motion_telegram_2",
+        },
+      ],
     },
     opening: {
       year: "2022",
@@ -109,6 +194,40 @@ export const tabsCards = {
       year: "2023",
       title: "App animation",
       image: "18",
+      workData: [
+        {
+          type: "video",
+          width: 1,
+          content: "app_1",
+        },
+        {
+          type: "text",
+          width: 1,
+          content:
+            "Для мобильного приложения Мультибонус были разработаны покадровые анимации, а также lottie анимации.",
+        },
+        {
+          type: "video",
+          width: 0.495,
+          content: "app_2",
+        },
+        {
+          type: "container",
+          width: 0.495,
+          content: [
+            {
+              type: "video",
+              width: 1,
+              content: "app_4",
+            },
+            {
+              type: "video",
+              width: 1,
+              content: "app_3",
+            },
+          ],
+        },
+      ],
     },
   },
   presentation: {
@@ -116,16 +235,37 @@ export const tabsCards = {
       year: "2021",
       title: "Презентации для Музея советских игровых автоматов",
       image: "19",
+      workData: [
+        {
+          type: "image",
+          width: 1,
+          content: "museum",
+        },
+      ],
     },
     corporate: {
       year: "2022",
       title: "Корпоративный шаблон для Мультибонуса",
       image: "20",
+      workData: [
+        {
+          type: "image",
+          width: 1,
+          content: "corporate",
+        },
+      ],
     },
     upmoney: {
       year: "2023",
       title: "Презентация для Upmoney",
       image: "21",
+      workData: [
+        {
+          type: "image",
+          width: 1,
+          content: "upmoney",
+        },
+      ],
     },
   },
 };
