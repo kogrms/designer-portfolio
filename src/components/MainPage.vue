@@ -172,6 +172,12 @@ export default {
         element.scrollIntoView({ behavior: "smooth" });
       }
     },
+    jumpToSection(sectionId) {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView();
+      }
+    },
     selectTab(tab) {
       this.selectedTab = tab;
     },
@@ -185,7 +191,7 @@ export default {
   mounted() {
     // console.log(this.tabsCards);
     if (this.$route.params.section) {
-      this.scrollToSection(this.$route.params.section);
+      this.jumpToSection(this.$route.params.section);
       console.log(this.$route.params.section);
     }
     if (this.$route.params.tab) {

@@ -43,7 +43,7 @@
 }
 .content {
   /* position: relative; */
-  min-height: 100vh;
+  min-height: calc(100vh - (9.5vw * 2));
   margin-left: calc(31.7vw);
   padding-top: 9.5vw;
   padding-bottom: 9.5vw;

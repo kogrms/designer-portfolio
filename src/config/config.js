@@ -21,16 +21,107 @@ export const tabsCards = {
       year: "2022",
       title: "Лендинг для зарплатных клиентов ВТБ",
       image: "4",
+      workData: [
+        {
+          type: "image",
+          width: 1,
+          content: "salary_1",
+        },
+        {
+          type: "text",
+          width: 1,
+          content:
+            "В рамках проекта была создана модульная страница для коммуникации с зарплатными клиентами ВТБ. Страница создавалась сразу для двух сегментов – массовый и премиум. Отдельные модули страницы позволили легко обновлять информацию в условиях быстрых изменений.",
+        },
+        {
+          type: "image",
+          width: 0.495,
+          content: "salary_2",
+        },
+        {
+          type: "container",
+          width: 0.495,
+          content: [
+            {
+              type: "image",
+              width: 1,
+              content: "salary_3",
+            },
+            {
+              type: "image",
+              width: 1,
+              content: "salary_4",
+            },
+          ],
+        },
+      ],
     },
     birthday: {
       year: "2022",
       title: "Лендинг для клиентов ВТБ «С днем рождения!»",
       image: "5",
+      workData: [
+        {
+          type: "image",
+          width: 1,
+          content: "birthday_1",
+        },
+        {
+          type: "text",
+          width: 1,
+          content:
+            "Для клиентов ВТБ был создан лендинг с подарками от программы лояльности. Каждому кликнту ВТБ ссылка на этот лендинг отправляется в чате в личном кабинете в приложении или Интернет-банке.<br/>В мобильной версии была добавлена геймефикация: пользователю предлагается лопнуть шарики, чтобы добраться до подарка. Это повысило конверсию кликов почти в 2 раза.",
+        },
+        {
+          type: "image",
+          width: 0.495,
+          content: "birthday_2",
+        },
+        {
+          type: "container",
+          width: 0.495,
+          content: [
+            {
+              type: "image",
+              width: 1,
+              content: "birthday_3",
+            },
+            {
+              type: "image",
+              width: 1,
+              content: "birthday_4",
+            },
+          ],
+        },
+      ],
     },
     crm: {
       year: "2023",
       title: "Лендинг для CRM рассылок",
       image: "6",
+      workData: [
+        {
+          type: "image",
+          width: 0.495,
+          content: "crm_1",
+        },
+        {
+          type: "container",
+          width: 0.495,
+          content: [
+            {
+              type: "image",
+              width: 1,
+              content: "crm_2",
+            },
+            {
+              type: "image",
+              width: 1,
+              content: "crm_3",
+            },
+          ],
+        },
+      ],
     },
     burger: {
       year: "2023",
@@ -43,21 +134,79 @@ export const tabsCards = {
       year: "2022",
       title: "Key visual и коммуникации для акции «Снова в школу»",
       image: "8",
+      workData: [
+        {
+          type: "image",
+          width: 1,
+          content: "school_1",
+        },
+        {
+          type: "image",
+          width: 1,
+          content: "school_2",
+        },
+      ],
     },
     banners: {
       year: "2022",
       title: "Баннеры",
       image: "9",
+      workData: [
+        {
+          type: "image",
+          width: 1,
+          content: "banners_1",
+        },
+        {
+          type: "image",
+          width: 1,
+          content: "banners_2",
+        },
+        {
+          type: "image",
+          width: 1,
+          content: "banners_3",
+        },
+      ],
     },
     socials: {
       year: "2023",
       title: "Соцсети",
       image: "10",
+      workData: [
+        {
+          type: "image",
+          width: 1,
+          content: "socials_1",
+        },
+        {
+          type: "image",
+          width: 1,
+          content: "socials_2",
+        },
+        {
+          type: "image",
+          width: 0.495,
+          content: "socials_3",
+        },
+        {
+          type: "video",
+          width: 0.495,
+          content: "socials",
+        },
+      ],
     },
     new_year: {
       year: "2023",
       title: "Key visual для акции «Новогодний стол»",
       image: "11",
+      workData: [
+        {
+          type: "image",
+          width: 1,
+          content: "new_year",
+        },
+      ],
     },
   },
   graphic: {
