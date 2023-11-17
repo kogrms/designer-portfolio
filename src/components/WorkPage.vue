@@ -30,10 +30,47 @@
       </nav>
     </div>
     <div class="content">
-      <div class="">1234</div>
-      <div class="">1234</div>
-      <div class="">1234</div>
-      <div class="">1234</div>
+      <div
+        class=""
+        v-for="(work, index) in pageData.workData"
+        :key="index"
+        @click="() => {}"
+      >
+        <div
+          v-if="work.type === 'video'"
+          class="video-container"
+          :style="{ width: `calc(${work.width} * 100vw)` }"
+        >
+          <video autoplay loop muted playsinline>
+            <source
+              :src="`../../assets/works/graphic/tiger/${work.content}`"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+        <div
+          v-else-if="work.type === 'image'"
+          class=""
+          :style="{ width: `calc(${work.width} * 100vw)` }"
+        >
+          <!-- <img
+            class="card-image"
+            :class="{ hovered: hoveredCard === card }"
+            :src="require(`${work.content}`)"
+          /> -->
+          <img :src="`./../assets/works/graphic/tiger/${work.content}`" />
+        </div>
+        <!-- <div
+          class=""
+          style="
+             {
+              width: calc();
+            }
+          "
+        >
+          {{ work[index].content }}
+        </div> -->
+      </div>
     </div>
   </div>
 </template>

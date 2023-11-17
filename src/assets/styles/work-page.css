@@ -1,17 +1,6 @@
 .work {
   position: relative;
 }
-.content {
-  /* position: relative; */
-  min-height: 100vh;
-  padding-left: calc(31.7vw);
-  background-color: #F8F9FC;
-  color: #3A3E49;
-  font-size: 0.24em;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 120%;
-}
 .sidebar {
   position: fixed;
   width: calc(31.7vw - (2 * 2.8vw));
@@ -49,4 +38,24 @@
 .navbar-sidebar {
   position: fixed;
   bottom: 40px;
+}
+.content {
+  /* position: relative; */
+  min-height: 100vh;
+  padding-left: calc(31.7vw);
+  background-color: #F8F9FC;
+  color: #3A3E49;
+  font-size: 0.24em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+.video-container {
+  /* width: 100%; */
+  position: relative;
+  overflow: hidden;
+}
+video {
+  width: 100%;
+  height: auto;
 }

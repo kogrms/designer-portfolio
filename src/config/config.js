@@ -65,6 +65,18 @@ export const tabsCards = {
       year: "2022",
       title: "Новогодний мерч в каталог Мультибонуса",
       image: "12",
+      workData: [
+        {
+          type: "image",
+          width: 0.333,
+          content: "tiger_1.png",
+        },
+        {
+          type: "video",
+          width: 0.333,
+          content: "graphic_tiger.mp4",
+        },
+      ],
     },
     workers: {
       year: "2022",
