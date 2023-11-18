@@ -37,6 +37,7 @@
           @click="() => {}"
           :class="{
             'video-container': work.type === 'video',
+            'br-8px': work.type === 'video' && work?.style === 'br-8px',
             'image-container': work.type === 'image',
             'text-container': work.type === 'text',
           }"
@@ -60,6 +61,13 @@
           <p
             v-else-if="work.type === 'text'"
             class="work-text"
+            :class="{
+              'text-heading': work?.style === 'heading',
+              'text-heading mt-40px': work?.style === 'heading-mt40',
+              'mt-24px': work?.style === 'below-heading',
+              'text-caption': work?.style === 'caption',
+              'text-caption last': work?.style === 'caption-last',
+            }"
             v-html="work.content"
           ></p>
           <div v-else-if="work.type === 'container'" class="nest-container">

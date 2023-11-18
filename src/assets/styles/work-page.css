@@ -67,6 +67,9 @@
   border-radius: 36.259px;
   overflow: hidden;
 }
+.br-8px {
+  border-radius: 8px;
+}
 video {
   width: 100%;
   height: auto;
@@ -91,6 +94,31 @@ video {
   margin-top: calc(2.2vw - 8px);
   margin-bottom: calc(2.7vw - 8px);
   text-align: left;
+}
+.mt-24px {
+  margin-top: 16px;
+}
+.text-heading {
+  font-size: 2vw;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  &.mt-40px {
+    margin-top: 32px;
+  }
+}
+.text-caption {
+  font-size: 1.2vw;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: calc(4.5vw - 8px);
+  text-align: right;
+  text-transform: uppercase;
+
+  &.last {
+    margin-bottom: 0;
+  }
 }
 .nest-container {
   display: flex;
