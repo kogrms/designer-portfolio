@@ -2,6 +2,7 @@
 
 @import url(./cover.css);
 @import url(./works.css);
+@import url(./contacts.css);
 @import url(./work-page.css);
 
 body,
@@ -100,8 +101,11 @@ button:active {
     }
   }
   &:nth-of-type(4) {
-    height: 100vh;
+    /* height: 100vh; */
     background: #1C1F25;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 126px;
 
     .section-title {
       top: 90px;

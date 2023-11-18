@@ -79,6 +79,8 @@
                 'image-container': block.type === 'image',
               }"
               :style="{ width: `calc(${block.width} * 100%)` }"
+              @mouseover="hoveredCardIndex = i"
+              @mouseleave="hoveredCardIndex = null"
             >
               <video
                 v-if="block.type === 'video'"
@@ -101,6 +103,21 @@
                 "
                 class="work-image"
               />
+              <div
+                v-else-if="block.type === 'hovercard'"
+                class="work-image"
+                :class="{}"
+              >
+                <img
+                  :src="
+                    hoveredCardIndex === i
+                      ? require(`../assets/works/${tabName}/${pageName}/${block.hover}.png`)
+                      : require(`../assets/works/${tabName}/${pageName}/${block.image}.png`)
+                  "
+                  class="work-image"
+                  :style="{ cursor: 'pointer' }"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -113,14 +130,17 @@
 // import { debounce } from "lodash";
 import { tabsCards } from "./../config/config";
 import router from "./../router.js";
+// import HoverCard from "./HoverCard.vue";
 
 export default {
   name: "WorkPage",
+  // components: { HoverCard },
   data() {
     return {
       pageName: this.$route.params.card,
       tabName: this.$route.params.tab,
       tabsCards: tabsCards,
+      hoveredCardIndex: null,
     };
   },
   computed: {

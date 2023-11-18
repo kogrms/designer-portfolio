@@ -1,0 +1,57 @@
+.contacts {
+  margin-top: 29vw;
+  display: flex;
+  justify-content: space-between;
+  /* gap: 28px; */
+}
+.contact {
+  cursor: pointer;
+  border-radius: 23px;
+  overflow: hidden;
+  width: calc(((100vw - 13vw) / 5) - 1px);
+  height: calc(((100vw - 13vw) / 5) - 1px);
+  background-size: contain;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+}
+.inner-contact {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* padding-top: 30px; */
+  color: #FFFFFF;
+  font-size: 1.94vw;
+  font-weight: 600;
+  line-height: 120%;
+}
+.contact-heading {
+  text-align: left;
+  padding-top: 1.9vw;
+  padding-left: 1.9vw;
+}
+.contact-icon {
+  position: absolute;
+  width: 2.9vw;
+  height: 2.9vw;
+  right: 1.27vw;
+  bottom: 1.27vw;
+}
+.email-paste {
+  margin-top: 20%;
+  font-size: 1.2vw;
+  font-weight: 500;
+  line-height: 120%;
+  padding: 0.6vw;
+  border: solid 1px #FFFFFF;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.20);
+  margin-left: 1.8vw;
+  margin-right: 1.8vw;
+
+  &.copied {
+    border: solid 1px #27CF0C;
+  }
+}
+.email-copied {
+  color: #27CF0C;
+}

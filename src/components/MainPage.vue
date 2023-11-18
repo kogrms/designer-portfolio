@@ -1,6 +1,5 @@
 <template>
   <div class="main">
-    <!-- <section class="banner">{{ msg }}</section> -->
     <section class="section">
       <nav class="navbar">
         <button class="nav-button" @click="scrollToSection('works')">
@@ -118,33 +117,55 @@
         src="../assets/images/contacts.svg"
         alt="Contacts"
       />
+      <div class="contacts">
+        <div
+          v-for="(contact, i) in contactCards"
+          :key="i"
+          class="contact"
+          @mouseover="hoveredContactIndex = i"
+          @mouseleave="(hoveredContactIndex = null), (isEmailCopied = false)"
+          @click="handleContactClick(i)"
+          :style="{
+            'background-image': `url(${
+              hoveredContactIndex === i
+                ? require(`../assets/images/contacts/${contact.hover}`)
+                : require(`../assets/images/contacts/${contact.image}`)
+            })`,
+          }"
+        >
+          <div v-if="contact.heading" class="inner-contact">
+            <div class="contact-heading">
+              {{ contact.heading }}
+              <span v-if="contact.email && isEmailCopied" class="email-copied">
+                copied
+              </span>
+            </div>
+            <div
+              v-if="contact.email && hoveredContactIndex === i"
+              class="email-paste"
+              :class="{ copied: isEmailCopied }"
+            >
+              {{ contact.email }}
+            </div>
+            <img
+              v-if="contact.email && hoveredContactIndex === i"
+              :src="require('../assets/images/contact_arrow_hover.svg')"
+              class="contact-icon"
+            />
+            <img
+              v-if="contact.email && isEmailCopied"
+              :src="require('../assets/images/contact_arrow_copied.svg')"
+              class="contact-icon"
+            />
+            <img
+              v-else
+              :src="require('../assets/images/contact_arrow.svg')"
+              class="contact-icon"
+            />
+          </div>
+        </div>
+      </div>
     </section>
-    <!-- <p>
-      For a guide and recipes on how to configure / customize this project,<br />
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener"
-        >vue-cli documentation</a
-      >.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel"
-          target="_blank"
-          rel="noopener"
-          >babel</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint"
-          target="_blank"
-          rel="noopener"
-          >eslint</a
-        >
-      </li>
-    </ul> -->
   </div>
 </template>
 
@@ -152,6 +173,7 @@
 // import { debounce } from "lodash";
 import { tabsCards } from "./../config/config";
 import router from "./../router.js";
+import Clipboard from "clipboard";
 
 export default {
   name: "MainPage",
@@ -160,11 +182,40 @@ export default {
       selectedTab: "product",
       tabsCards: tabsCards,
       hoveredCard: null,
+      hoveredContactIndex: null,
+      isEmailCopied: false,
+      contactCards: [
+        {
+          heading: "Telegram",
+          image: "1.png",
+          hover: "1_hover.gif",
+          link: "1",
+        },
+        {
+          heading: "E-mail",
+          email: "darfeddar@gmail.com",
+          image: "1.png",
+          hover: "2_hover.gif",
+        },
+        {
+          heading: "Linkedin",
+          image: "1.png",
+          hover: "3_hover.gif",
+          link: "https://www.linkedin.com/in/daria-fedorenko-designer/",
+        },
+        {
+          heading: "Резюме",
+          image: "1.png",
+          hover: "4_hover.gif",
+          link: "3",
+        },
+        {
+          image: "5.png",
+          hover: "5_hover.png",
+        },
+      ],
     };
   },
-  // props: {
-  //   msg: String,
-  // },
   methods: {
     scrollToSection(sectionId) {
       const element = document.getElementById(sectionId);
@@ -182,10 +233,50 @@ export default {
       this.selectedTab = tab;
     },
     navigateToCard(card) {
-      router.push({
-        name: "card",
-        params: { tab: this.selectedTab, card: card },
-      });
+      if (this.tabsCards[this.selectedTab][card].link && card === "opening") {
+        window.open("https://www.youtube.com/watch?v=MqFTw3-Mu00", "_blank");
+      } else if (
+        this.tabsCards[this.selectedTab][card].link &&
+        card === "burger"
+      ) {
+        window.open(
+          "https://multibonus.ru/landings/bk?utm_referrer=https%3A%2F%2Fwww.google.com%2F",
+          "_blank"
+        );
+      } else {
+        router.push({
+          name: "card",
+          params: { tab: this.selectedTab, card: card },
+        });
+      }
+    },
+    handleContactClick(i) {
+      const contact = this.contactCards[i];
+      if (contact.link) {
+        console.log(contact.link);
+      } else if (contact.email) {
+        console.log(contact.email);
+
+        // Copy email to clipboard
+        const clipboard = new Clipboard(".contact", {
+          text: () => contact.email,
+        });
+        // Show success message on successful copy
+        clipboard.on("success", (e) => {
+          this.isEmailCopied = true;
+          console.log("Email copied to clipboard");
+          e.clearSelection();
+        });
+        // Destroy the clipboard instance after copying
+        clipboard.on("error", () => {
+          console.error("Failed to copy email to clipboard");
+        });
+        // Destroy the clipboard instance after a short delay
+        setTimeout(() => {
+          clipboard.destroy();
+          this.isEmailCopied = false;
+        }, 2000); // You can adjust the delay as needed
+      }
     },
   },
   mounted() {

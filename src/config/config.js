@@ -212,6 +212,7 @@ export const tabsCards = {
       year: "2023",
       title: "Лендинг для совместной акции ВТБ и БУРГЕР КИНГ",
       image: "7",
+      link: true,
     },
   },
   communication: {
@@ -346,8 +347,38 @@ export const tabsCards = {
           content: "workers_1",
         },
         {
+          type: "container",
+          width: 0.384,
+          content: [
+            {
+              type: "hovercard",
+              width: 0.484,
+              image: "1",
+              hover: "1_hover",
+            },
+            {
+              type: "hovercard",
+              width: 0.484,
+              image: "2",
+              hover: "2_hover",
+            },
+            {
+              type: "hovercard",
+              width: 0.484,
+              image: "3",
+              hover: "3_hover",
+            },
+            {
+              type: "hovercard",
+              width: 0.484,
+              image: "4",
+              hover: "4_hover",
+            },
+          ],
+        },
+        {
           type: "image",
-          width: 0.607,
+          width: 0.605,
           content: "workers_2",
         },
         {
@@ -436,6 +467,7 @@ export const tabsCards = {
       year: "2022",
       title: "Опенинг трансляции для Музея советских игровых автоматов",
       image: "17",
+      link: true,
     },
     app: {
       year: "2023",
