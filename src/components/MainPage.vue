@@ -148,18 +148,17 @@
               {{ contact.email }}
             </div>
             <img
+              :src="require('../assets/images/contact_arrow.svg')"
+              class="contact-icon"
+            />
+            <img
               v-if="contact.email && hoveredContactIndex === i"
-              :src="require('../assets/images/contact_arrow_hover.svg')"
+              :src="require('../assets/images/contact_copy.svg')"
               class="contact-icon"
             />
             <img
               v-if="contact.email && isEmailCopied"
               :src="require('../assets/images/contact_arrow_copied.svg')"
-              class="contact-icon"
-            />
-            <img
-              v-else
-              :src="require('../assets/images/contact_arrow.svg')"
               class="contact-icon"
             />
           </div>

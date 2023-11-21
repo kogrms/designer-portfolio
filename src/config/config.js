@@ -81,12 +81,12 @@ export const tabsCards = {
         {
           type: "image",
           width: 1,
-          content: "redesign_4",
+          content: "redesign_5",
         },
         {
           type: "image",
           width: 1,
-          content: "redesign_5",
+          content: "redesign_4",
         },
       ],
     },

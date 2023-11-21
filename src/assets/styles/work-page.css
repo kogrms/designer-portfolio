@@ -14,8 +14,8 @@
   line-height: 120%;
   font-weight: 500;
   letter-spacing: 2.1px;
-  background-color: #3A3E49;
-  color: #FFF;
+  background-color: #E0E1F2;
+  color: #3A3E49;
 }
 .sidebar-button {
   padding: 1vw;
@@ -23,12 +23,19 @@
   font-weight: 600;
   line-height: 120%;
   letter-spacing: 2%;
-  background-color: #3A3E49;
-  color: #FFF;
-  border-color: #FFF;
+  background-color: #E0E1F2;
+  color: #3A3E49;
+  border-color: #3A3E49;
 }
 .sidebar-button:hover {
-  background-color: #4D5260;
+  color: #3A3E49;
+  border-color: #3A3E49;
+  background-color: #CDCEE7;
+}
+.sidebar-button:active {
+  color: #3A3E49;
+  border-color: #3A3E49;
+  background-color: #F1F2FD;
 }
 .sidebar-heading {
   margin-top: 3vw;
