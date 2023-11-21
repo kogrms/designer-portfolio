@@ -17,16 +17,6 @@
         src="../assets/images/daria_fedorenko.svg"
         alt="Daria Fedorenko"
       />
-      <img
-        class="star-big"
-        src="../assets/images/star_big_pink.svg"
-        alt="Daria Fedorenko"
-      />
-      <img
-        class="star-small"
-        src="../assets/images/star_small_gray.svg"
-        alt="Daria Fedorenko"
-      />
     </section>
     <section class="section" id="works">
       <img class="section-title" src="../assets/images/works.svg" alt="Works" />
@@ -110,6 +100,27 @@
         src="../assets/images/experience.svg"
         alt="Experience"
       />
+      <div class="job">
+        <div class="job-title">
+          VTB Multibonus
+          <span class="job-position">Дизайнер generalist</span>
+        </div>
+        <div class="job-time">2021-2023</div>
+      </div>
+      <div class="job">
+        <div class="job-title">
+          Музей советских игровых автоматов
+          <span class="job-position">графический дизайнер</span>
+        </div>
+        <div class="job-time">2019-2021</div>
+      </div>
+      <div class="job">
+        <div class="job-title">
+          фриланс
+          <span class="job-position">графический дизайнер</span>
+        </div>
+        <div class="job-time">2016-2018</div>
+      </div>
     </section>
     <section class="section" id="contacts">
       <img

@@ -1,0 +1,37 @@
+.job {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.7vw;
+  color: #3A3E49;
+  font-size: 1.9vw;
+  font-weight: 500;
+  line-height: 120%;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.job:hover {
+  border-radius: 1000px;
+  background-color: #3A3E49;
+  color: #FFFFFF;
+}
+.job:active {
+  border-radius: 1000px;
+  background-color: #3A3E49;
+  color: #FFFFFF;
+}
+
+.job-title {
+  /* color: #A0ABC7; */
+}
+.job-position {
+  color: #A0ABC7;
+  margin-left: 1.9vw;
+}
+.job-time {
+  /* color: #A0ABC7; */
+}
+
+
+
+
+
