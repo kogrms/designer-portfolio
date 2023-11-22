@@ -100,24 +100,50 @@
         src="../assets/images/experience.svg"
         alt="Experience"
       />
-      <div class="job">
-        <div class="job-title">
-          VTB Multibonus
-          <span class="job-position">Дизайнер generalist</span>
+      <a
+        class="job"
+        @mouseover="hoveredJobIndex = 1"
+        @mouseleave="hoveredJobIndex = null"
+        href="https://multibonus.ru"
+        target="_blank"
+      >
+        <div style="display: flex; justify-content: flex-start">
+          <div class="job-title" :class="{ hovered: hoveredJobIndex === 1 }">
+            VTB Multibonus
+          </div>
+          <div class="job-position" :class="{ hovered: hoveredJobIndex === 1 }">
+            Дизайнер generalist
+          </div>
         </div>
         <div class="job-time">2021-2023</div>
-      </div>
-      <div class="job">
-        <div class="job-title">
-          Музей советских игровых автоматов
-          <span class="job-position">графический дизайнер</span>
+      </a>
+      <a
+        class="job"
+        @mouseover="hoveredJobIndex = 2"
+        @mouseleave="hoveredJobIndex = null"
+        href="https://15kop.ru"
+        target="_blank"
+      >
+        <div style="display: flex; justify-content: flex-start">
+          <div class="job-title" :class="{ hovered: hoveredJobIndex === 2 }">
+            Музей советских игровых автоматов
+          </div>
+          <div class="job-position" :class="{ hovered: hoveredJobIndex === 2 }">
+            графический дизайнер
+          </div>
         </div>
         <div class="job-time">2019-2021</div>
-      </div>
-      <div class="job">
-        <div class="job-title">
-          фриланс
-          <span class="job-position">графический дизайнер</span>
+      </a>
+      <div
+        class="job no-link"
+        @mouseover="hoveredJobIndex = 3"
+        @mouseleave="hoveredJobIndex = null"
+      >
+        <div style="display: flex; justify-content: flex-start">
+          <div class="job-title">фриланс</div>
+          <div class="job-position" :class="{ hovered: hoveredJobIndex === 3 }">
+            графический дизайнер
+          </div>
         </div>
         <div class="job-time">2016-2018</div>
       </div>
@@ -193,6 +219,7 @@ export default {
       tabsCards: tabsCards,
       hoveredCard: null,
       hoveredContactIndex: null,
+      hoveredJobIndex: null,
       isEmailCopied: false,
       contactCards: [
         {
