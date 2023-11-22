@@ -29,7 +29,6 @@
 }
 
 .job-title {
-  /* color: #A0ABC7; */
   &.hovered {
     text-decoration: underline;
   }
@@ -38,10 +37,8 @@
   color: #A0ABC7;
   margin-left: 1.9vw;
   justify-self: flex-start;
-  /* text-decoration: none; */
 
   &.hovered {
-    /* text-decoration: none; */
     color: #BA87FA;
   }
 }

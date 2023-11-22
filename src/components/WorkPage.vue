@@ -65,8 +65,8 @@
               'text-heading': work?.style === 'heading',
               'text-heading mt-40px': work?.style === 'heading-mt40',
               'mt-24px': work?.style === 'below-heading',
-              'text-caption': work?.style === 'caption',
-              'text-caption last': work?.style === 'caption-last',
+              'text-caption': work?.style?.includes('caption'),
+              last: work?.style?.includes('last'),
             }"
             v-html="work.content"
           ></p>

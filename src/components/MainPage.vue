@@ -280,6 +280,14 @@ export default {
           "https://multibonus.ru/landings/bk?utm_referrer=https%3A%2F%2Fwww.google.com%2F",
           "_blank"
         );
+      } else if (
+        this.tabsCards[this.selectedTab][card].link &&
+        card === "praktikum"
+      ) {
+        window.open(
+          "https://www.figma.com/proto/eoxzownLnNnuBp1vHxbQAD/%D0%A0%D0%B5%D0%B2%D1%8C%D1%8E-5-%D1%81%D0%BF%D1%80%D0%B8%D0%BD%D1%82%D0%B0_%D0%A4%D0%B5%D0%B4%D0%BE%D1%80%D0%B5%D0%BD%D0%BA%D0%BE-%D0%94%D0%B0%D1%80%D1%8C%D1%8F?page-id=2%3A418&type=design&node-id=12-17810&viewport=-4136%2C1050%2C0.29&t=3B5C5DsmTjUzVP5j-1&scaling=min-zoom&mode=design",
+          "_blank"
+        );
       } else {
         router.push({
           name: "card",

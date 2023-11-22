@@ -101,6 +101,10 @@ video {
   margin-top: calc(2.2vw - 8px);
   margin-bottom: calc(2.7vw - 8px);
   text-align: left;
+
+  &.last {
+    margin-bottom: 0;
+  }
 }
 .mt-24px {
   margin-top: 16px;
