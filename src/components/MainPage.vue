@@ -17,6 +17,20 @@
         src="../assets/images/daria_fedorenko.svg"
         alt="Daria Fedorenko"
       />
+      <div class="spinner">
+        <img
+          class="spinner-arrow"
+          src="../assets/images/arrow_cover.svg"
+          alt="Arrow"
+        />
+        <a class="" href="https://t.me/ya_monstr_a_sho" target="_blank">
+          <img
+            class="spinner-text"
+            src="../assets/images/spinner_text.svg"
+            alt="Arrow"
+          />
+        </a>
+      </div>
     </section>
     <section class="section" id="works">
       <img class="section-title" src="../assets/images/works.svg" alt="Works" />
