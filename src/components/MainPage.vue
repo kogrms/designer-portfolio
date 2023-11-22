@@ -226,7 +226,7 @@ export default {
           heading: "Telegram",
           image: "1.png",
           hover: "1_hover.gif",
-          link: "1",
+          link: "https://t.me/ya_monstr_a_sho",
         },
         {
           heading: "E-mail",
@@ -244,7 +244,7 @@ export default {
           heading: "Резюме",
           image: "1.png",
           hover: "4_hover.gif",
-          link: "3",
+          link: "https://drive.google.com/file/d/1AMLssnQscQ3dD2p0KXXOizaRh3WOiSB4/view?usp=sharing",
         },
         {
           image: "5.png",
@@ -298,6 +298,7 @@ export default {
     handleContactClick(i) {
       const contact = this.contactCards[i];
       if (contact.link) {
+        window.open(contact.link, "_blank");
         console.log(contact.link);
       } else if (contact.email) {
         console.log(contact.email);
