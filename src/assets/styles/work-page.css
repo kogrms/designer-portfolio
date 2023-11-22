@@ -1,0 +1,138 @@
+.work {
+  position: relative;
+  font-size: 0;
+  line-height: 0;
+}
+.sidebar {
+  position: fixed;
+  width: calc(31.7vw - (2 * 2.8vw));
+  height: 100vh;
+  padding: 2.8vw;
+  text-align: left;
+  font-size: 2vw;
+  font-style: normal;
+  line-height: 120%;
+  font-weight: 500;
+  letter-spacing: 2.1px;
+  background-color: #E0E1F2;
+  color: #3A3E49;
+}
+.sidebar-button {
+  padding: 1vw;
+  font-size: 1.2vw;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 2%;
+  background-color: #E0E1F2;
+  color: #3A3E49;
+  border-color: #3A3E49;
+}
+.sidebar-button:hover {
+  color: #3A3E49;
+  border-color: #3A3E49;
+  background-color: #CDCEE7;
+}
+.sidebar-button:active {
+  color: #3A3E49;
+  border-color: #3A3E49;
+  background-color: #F1F2FD;
+}
+.sidebar-heading {
+  margin-top: 3vw;
+}
+.sidebar-year {
+  margin-top: 32px;
+  opacity: 0.4;
+}
+.navbar-sidebar {
+  position: fixed;
+  bottom: 40px;
+}
+.content {
+  /* position: relative; */
+  min-height: calc(100vh - (9.5vw * 2));
+  margin-left: calc(31.7vw);
+  padding-top: 9.5vw;
+  padding-bottom: 9.5vw;
+  background-color: #F8F9FC;
+  color: #3A3E49;
+  font-size: 0.24em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+.inner-content {
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.video-container {
+  width: 100%;
+  position: relative;
+  border-radius: 36.259px;
+  overflow: hidden;
+}
+.br-8px {
+  border-radius: 8px;
+}
+video {
+  width: 100%;
+  height: auto;
+}
+.image-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.work-image {
+  width: 100%;
+  height: auto;
+}
+.text-container {
+  width: 100%;
+}
+.work-text {
+  width: 100%;
+  font-size: 1.6vw;
+  line-height: 120%;
+  color: #3A3E49;
+  margin-top: calc(2.2vw - 8px);
+  margin-bottom: calc(2.7vw - 8px);
+  text-align: left;
+
+  &.last {
+    margin-bottom: 0;
+  }
+}
+.mt-24px {
+  margin-top: 16px;
+}
+.text-heading {
+  font-size: 2vw;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  &.mt-40px {
+    margin-top: 32px;
+  }
+}
+.text-caption {
+  font-size: 1.2vw;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: calc(4.5vw - 8px);
+  text-align: right;
+  text-transform: uppercase;
+
+  &.last {
+    margin-bottom: 0;
+  }
+}
+.nest-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
