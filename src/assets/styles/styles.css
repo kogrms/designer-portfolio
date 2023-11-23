@@ -66,65 +66,67 @@ button:active {
   text-align: center;
   overflow-y: scroll;
 }
-.section {
+.section-cover {
   overflow: hidden;
   position: relative;
-
-  &:nth-of-type(1) {
-    background: #1C1F25;
-    height: 100vh;
-    background-image: url("../images/cover.png");
-    background-position: bottom;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding-left: 40px;
-
-    .section-title {
-      bottom: 80px;
-      width: 59.2vw;
-    }
-  }
-  &:nth-of-type(2) {
-    /* height: 800px; */
-    background: #F8F9FC;
-    /* padding-top: 34vh; */
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 80px;
-
-    .section-title {
-      top: 90px;
-      width: 37.5vw;
-    }
-  }
-  &:nth-of-type(3) {
-    /* height: 100vh; */
-    background: #EAEBF9;
-    padding-top: 20.1vw;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 70px;
-
-    .section-title {
-      top: 90px;
-      width: 62.2vw;
-    }
-  }
-  &:nth-of-type(4) {
-    /* height: 100vh; */
-    background: #1C1F25;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 126px;
-
-    .section-title {
-      top: 90px;
-      width: 54.8vw;
-    }
-  }
+  background: #1C1F25;
+  height: 100vh;
+  background-image: url("../images/cover.png");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-left: 40px;
 }
-.section-title {
+.section-title-cover {
   position: absolute;
   left: 40px;
   z-index: 10;
+  bottom: 80px;
+  width: 59.2vw;
+}
+.section-works {
+  overflow: hidden;
+  position: relative;
+  background: #F8F9FC;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 80px;
+}
+.section-title-works {
+  position: absolute;
+  left: 40px;
+  z-index: 10;
+  top: 90px;
+  width: 37.5vw;
+}
+.section-experience {
+  overflow: hidden;
+  position: relative;
+  background: #EAEBF9;
+  padding-top: 20.1vw;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 70px;
+}
+.section-title-experience {
+  position: absolute;
+  left: 40px;
+  z-index: 10;
+  top: 90px;
+  width: 62.2vw;
+}
+.section-contacts {
+  overflow: hidden;
+  position: relative;
+  background: #1C1F25;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 126px;
+}
+.section-title-contacts {
+  position: absolute;
+  left: 40px;
+  z-index: 10;
+  top: 90px;
+  width: 54.8vw;
 }

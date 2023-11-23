@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <section class="section">
+    <section class="section-cover">
       <nav class="navbar">
         <button class="nav-button" @click="scrollToSection('works')">
           Works
@@ -13,7 +13,7 @@
         </button>
       </nav>
       <img
-        class="section-title"
+        class="section-title-cover"
         src="../assets/images/daria_fedorenko.svg"
         alt="Daria Fedorenko"
       />
@@ -32,8 +32,12 @@
         </a>
       </div>
     </section>
-    <section class="section" id="works">
-      <img class="section-title" src="../assets/images/works.svg" alt="Works" />
+    <section class="section-works" id="works">
+      <img
+        class="section-title-works"
+        src="../assets/images/works.svg"
+        alt="Works"
+      />
       <div class="tabs">
         <button
           class="tab"
@@ -108,9 +112,9 @@
         <!-- </router-link> -->
       </div>
     </section>
-    <section class="section" id="experience">
+    <section class="section-experience" id="experience">
       <img
-        class="section-title"
+        class="section-title-experience"
         src="../assets/images/experience.svg"
         alt="Experience"
       />
@@ -162,9 +166,9 @@
         <div class="job-time">2016-2018</div>
       </div>
     </section>
-    <section class="section" id="contacts">
+    <section class="section-contacts" id="contacts">
       <img
-        class="section-title"
+        class="section-title-contacts"
         src="../assets/images/contacts.svg"
         alt="Contacts"
       />
