@@ -1,6 +1,6 @@
 # Designer portfolio
 
-## A dynamic designer's portfolio website created with Vue.js (v2.x) and Vue Router
+## A clear designer's portfolio website created with Vue.js and Vue Router
 
 Showcase projects and work experience elegantly with smooth navigation and an engaging, responsive (desktop-only for now) user interface.
 
