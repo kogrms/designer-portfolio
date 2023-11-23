@@ -1,225 +1,246 @@
 <template>
-  <div class="main">
-    <section class="section-cover">
-      <nav class="navbar">
-        <button class="nav-button" @click="scrollToSection('works')">
-          Works
-        </button>
-        <button class="nav-button" @click="scrollToSection('experience')">
-          Experience
-        </button>
-        <button class="nav-button" @click="scrollToSection('contacts')">
-          Contacts
-        </button>
-      </nav>
-      <img
-        class="section-title-cover"
-        src="../assets/images/daria_fedorenko.svg"
-        alt="Daria Fedorenko"
-      />
-      <div class="spinner">
+  <div>
+    <div class="mobile-placeholder">
+      <div class="placeholder-icon"></div>
+      <div class="placeholder-text">
+        Пожалуйста,<br />откройте десктопную версию<br /><br />
+        Спасибо!
+      </div>
+    </div>
+    <div class="main">
+      <section class="section-cover">
+        <nav class="navbar">
+          <button class="nav-button" @click="scrollToSection('works')">
+            Works
+          </button>
+          <button class="nav-button" @click="scrollToSection('experience')">
+            Experience
+          </button>
+          <button class="nav-button" @click="scrollToSection('contacts')">
+            Contacts
+          </button>
+        </nav>
         <img
-          class="spinner-arrow"
-          src="../assets/images/arrow_cover.svg"
-          alt="Arrow"
+          class="section-title-cover"
+          src="../assets/images/daria_fedorenko.svg"
+          alt="Daria Fedorenko"
         />
-        <a class="" href="https://t.me/ya_monstr_a_sho" target="_blank">
+        <div class="spinner">
           <img
-            class="spinner-text"
-            src="../assets/images/spinner_text.svg"
+            class="spinner-arrow"
+            src="../assets/images/arrow_cover.svg"
             alt="Arrow"
           />
-        </a>
-      </div>
-    </section>
-    <section class="section-works" id="works">
-      <img
-        class="section-title-works"
-        src="../assets/images/works.svg"
-        alt="Works"
-      />
-      <div class="tabs">
-        <button
-          class="tab"
-          :class="{ active: selectedTab === 'product' }"
-          @click="selectTab('product')"
-        >
-          Продуктовые кейсы
-        </button>
-        <button
-          class="tab"
-          :class="{ active: selectedTab === 'web' }"
-          @click="selectTab('web')"
-        >
-          ВЕБ дизайн
-        </button>
-        <button
-          class="tab"
-          :class="{ active: selectedTab === 'communication' }"
-          @click="selectTab('communication')"
-        >
-          коммуникационный дизайн
-        </button>
-        <button
-          class="tab"
-          :class="{ active: selectedTab === 'graphic' }"
-          @click="selectTab('graphic')"
-        >
-          графический дизайн
-        </button>
-        <button
-          class="tab"
-          :class="{ active: selectedTab === 'motion' }"
-          @click="selectTab('motion')"
-        >
-          motion
-        </button>
-        <button
-          class="tab"
-          :class="{ active: selectedTab === 'presentation' }"
-          @click="selectTab('presentation')"
-        >
-          дизайн презентаций
-        </button>
-      </div>
-      <div class="cards">
-        <!-- <router-link
-        :to="{ name: 'works', params: { card: card } }" -->
-        <div
-          class="card"
-          v-for="(cardData, card) in tabsCards[selectedTab]"
-          :key="card"
-          @mouseover="hoveredCard = card"
-          @mouseout="hoveredCard = null"
-          @click="navigateToCard(card)"
-        >
-          <div class="card-year">{{ cardData.year }}</div>
-          <div class="card-image-wrap">
+          <a class="" href="https://t.me/ya_monstr_a_sho" target="_blank">
             <img
-              class="card-image"
-              :class="{ hovered: hoveredCard === card }"
-              :src="require(`../assets/images/cards/${cardData.image}.png`)"
+              class="spinner-text"
+              src="../assets/images/spinner_text.svg"
+              alt="Arrow"
             />
-          </div>
-          <div class="card-title-row">
-            <p class="card-title">{{ cardData.title }}</p>
-            <div
-              class="card-arrow"
-              :class="{ hovered: hoveredCard === card }"
-            ></div>
-          </div>
+          </a>
         </div>
-        <!-- </router-link> -->
-      </div>
-    </section>
-    <section class="section-experience" id="experience">
-      <img
-        class="section-title-experience"
-        src="../assets/images/experience.svg"
-        alt="Experience"
-      />
-      <a
-        class="job"
-        @mouseover="hoveredJobIndex = 1"
-        @mouseleave="hoveredJobIndex = null"
-        href="https://multibonus.ru"
-        target="_blank"
-      >
-        <div style="display: flex; justify-content: flex-start">
-          <div class="job-title" :class="{ hovered: hoveredJobIndex === 1 }">
-            VTB Multibonus
-          </div>
-          <div class="job-position" :class="{ hovered: hoveredJobIndex === 1 }">
-            Дизайнер generalist
-          </div>
+      </section>
+      <section class="section-works" id="works">
+        <img
+          class="section-title-works"
+          src="../assets/images/works.svg"
+          alt="Works"
+        />
+        <div class="tabs">
+          <button
+            class="tab"
+            :class="{ active: selectedTab === 'product' }"
+            @click="selectTab('product')"
+          >
+            Продуктовые кейсы
+          </button>
+          <button
+            class="tab"
+            :class="{ active: selectedTab === 'web' }"
+            @click="selectTab('web')"
+          >
+            ВЕБ дизайн
+          </button>
+          <button
+            class="tab"
+            :class="{ active: selectedTab === 'communication' }"
+            @click="selectTab('communication')"
+          >
+            коммуникационный дизайн
+          </button>
+          <button
+            class="tab"
+            :class="{ active: selectedTab === 'graphic' }"
+            @click="selectTab('graphic')"
+          >
+            графический дизайн
+          </button>
+          <button
+            class="tab"
+            :class="{ active: selectedTab === 'motion' }"
+            @click="selectTab('motion')"
+          >
+            motion
+          </button>
+          <button
+            class="tab"
+            :class="{ active: selectedTab === 'presentation' }"
+            @click="selectTab('presentation')"
+          >
+            дизайн презентаций
+          </button>
         </div>
-        <div class="job-time">2021-2023</div>
-      </a>
-      <a
-        class="job"
-        @mouseover="hoveredJobIndex = 2"
-        @mouseleave="hoveredJobIndex = null"
-        href="https://15kop.ru"
-        target="_blank"
-      >
-        <div style="display: flex; justify-content: flex-start">
-          <div class="job-title" :class="{ hovered: hoveredJobIndex === 2 }">
-            Музей советских игровых автоматов
+        <div class="cards">
+          <!-- <router-link
+          :to="{ name: 'works', params: { card: card } }" -->
+          <div
+            class="card"
+            v-for="(cardData, card) in tabsCards[selectedTab]"
+            :key="card"
+            @mouseover="hoveredCard = card"
+            @mouseout="hoveredCard = null"
+            @click="navigateToCard(card)"
+          >
+            <div class="card-year">{{ cardData.year }}</div>
+            <div class="card-image-wrap">
+              <img
+                class="card-image"
+                :class="{ hovered: hoveredCard === card }"
+                :src="require(`../assets/images/cards/${cardData.image}.png`)"
+              />
+            </div>
+            <div class="card-title-row">
+              <p class="card-title">{{ cardData.title }}</p>
+              <div
+                class="card-arrow"
+                :class="{ hovered: hoveredCard === card }"
+              ></div>
+            </div>
           </div>
-          <div class="job-position" :class="{ hovered: hoveredJobIndex === 2 }">
-            графический дизайнер
-          </div>
+          <!-- </router-link> -->
         </div>
-        <div class="job-time">2019-2021</div>
-      </a>
-      <div
-        class="job no-link"
-        @mouseover="hoveredJobIndex = 3"
-        @mouseleave="hoveredJobIndex = null"
-      >
-        <div style="display: flex; justify-content: flex-start">
-          <div class="job-title">фриланс</div>
-          <div class="job-position" :class="{ hovered: hoveredJobIndex === 3 }">
-            графический дизайнер
-          </div>
-        </div>
-        <div class="job-time">2016-2018</div>
-      </div>
-    </section>
-    <section class="section-contacts" id="contacts">
-      <img
-        class="section-title-contacts"
-        src="../assets/images/contacts.svg"
-        alt="Contacts"
-      />
-      <div class="contacts">
-        <div
-          v-for="(contact, i) in contactCards"
-          :key="i"
-          class="contact"
-          @mouseover="hoveredContactIndex = i"
-          @mouseleave="(hoveredContactIndex = null), (isEmailCopied = false)"
-          @click="handleContactClick(i)"
-          :style="{
-            'background-image': `url(${
-              hoveredContactIndex === i
-                ? require(`../assets/images/contacts/${contact.hover}`)
-                : require(`../assets/images/contacts/${contact.image}`)
-            })`,
-          }"
+      </section>
+      <section class="section-experience" id="experience">
+        <img
+          class="section-title-experience"
+          src="../assets/images/experience.svg"
+          alt="Experience"
+        />
+        <a
+          class="job"
+          @mouseover="hoveredJobIndex = 1"
+          @mouseleave="hoveredJobIndex = null"
+          href="https://multibonus.ru"
+          target="_blank"
         >
-          <div v-if="contact.heading" class="inner-contact">
-            <div class="contact-heading">
-              {{ contact.heading }}
-              <span v-if="contact.email && isEmailCopied" class="email-copied">
-                copied
-              </span>
+          <div style="display: flex; justify-content: flex-start">
+            <div class="job-title" :class="{ hovered: hoveredJobIndex === 1 }">
+              VTB Multibonus
             </div>
             <div
-              v-if="contact.email && hoveredContactIndex === i"
-              class="email-paste"
-              :class="{ copied: isEmailCopied }"
+              class="job-position"
+              :class="{ hovered: hoveredJobIndex === 1 }"
             >
-              {{ contact.email }}
+              Дизайнер generalist
             </div>
-            <img
-              :src="require('../assets/images/contact_arrow.svg')"
-              class="contact-icon"
-            />
-            <img
-              v-if="contact.email && hoveredContactIndex === i"
-              :src="require('../assets/images/contact_copy.svg')"
-              class="contact-icon"
-            />
-            <img
-              v-if="contact.email && isEmailCopied"
-              :src="require('../assets/images/contact_arrow_copied.svg')"
-              class="contact-icon"
-            />
+          </div>
+          <div class="job-time">2021-2023</div>
+        </a>
+        <a
+          class="job"
+          @mouseover="hoveredJobIndex = 2"
+          @mouseleave="hoveredJobIndex = null"
+          href="https://15kop.ru"
+          target="_blank"
+        >
+          <div style="display: flex; justify-content: flex-start">
+            <div class="job-title" :class="{ hovered: hoveredJobIndex === 2 }">
+              Музей советских игровых автоматов
+            </div>
+            <div
+              class="job-position"
+              :class="{ hovered: hoveredJobIndex === 2 }"
+            >
+              графический дизайнер
+            </div>
+          </div>
+          <div class="job-time">2019-2021</div>
+        </a>
+        <div
+          class="job no-link"
+          @mouseover="hoveredJobIndex = 3"
+          @mouseleave="hoveredJobIndex = null"
+        >
+          <div style="display: flex; justify-content: flex-start">
+            <div class="job-title">фриланс</div>
+            <div
+              class="job-position"
+              :class="{ hovered: hoveredJobIndex === 3 }"
+            >
+              графический дизайнер
+            </div>
+          </div>
+          <div class="job-time">2016-2018</div>
+        </div>
+      </section>
+      <section class="section-contacts" id="contacts">
+        <img
+          class="section-title-contacts"
+          src="../assets/images/contacts.svg"
+          alt="Contacts"
+        />
+        <div class="contacts">
+          <div
+            v-for="(contact, i) in contactCards"
+            :key="i"
+            class="contact"
+            @mouseover="hoveredContactIndex = i"
+            @mouseleave="(hoveredContactIndex = null), (isEmailCopied = false)"
+            @click="handleContactClick(i)"
+            :style="{
+              'background-image': `url(${
+                hoveredContactIndex === i
+                  ? require(`../assets/images/contacts/${contact.hover}`)
+                  : require(`../assets/images/contacts/${contact.image}`)
+              })`,
+            }"
+          >
+            <div v-if="contact.heading" class="inner-contact">
+              <div class="contact-heading">
+                {{ contact.heading }}
+                <span
+                  v-if="contact.email && isEmailCopied"
+                  class="email-copied"
+                >
+                  copied
+                </span>
+              </div>
+              <div
+                v-if="contact.email && hoveredContactIndex === i"
+                class="email-paste"
+                :class="{ copied: isEmailCopied }"
+              >
+                {{ contact.email }}
+              </div>
+              <img
+                :src="require('../assets/images/contact_arrow.svg')"
+                class="contact-icon"
+              />
+              <img
+                v-if="contact.email && hoveredContactIndex === i"
+                :src="require('../assets/images/contact_copy.svg')"
+                class="contact-icon"
+              />
+              <img
+                v-if="contact.email && isEmailCopied"
+                :src="require('../assets/images/contact_arrow_copied.svg')"
+                class="contact-icon"
+              />
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </div>
 </template>
 

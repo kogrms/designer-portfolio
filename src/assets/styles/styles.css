@@ -66,6 +66,51 @@ button:active {
   text-align: center;
   overflow-y: scroll;
 }
+
+@media (max-width: 1099px) {
+  .mobile-placeholder {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;background: #1C1F25;
+    height: 100vh;
+    background-image: url("../images/placeholder.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .main {
+    display: none;
+  }
+}
+@media (min-width: 1100px) {
+  .mobile-placeholder {
+    display: none;
+  }
+  .main {
+    display: block;
+  }
+}
+
+.placeholder-icon {
+  margin-top: 25vw;
+  margin-bottom: 10vw;
+  width: 12vw;
+  height: 12vw;
+  background-image: url("../images/placeholder_icon.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.placeholder-text {
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 6.2vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 8.2vw;
+}
+
 .section-cover {
   overflow: hidden;
   position: relative;
