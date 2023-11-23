@@ -1,6 +1,6 @@
 # Designer portfolio
 
-## A clear designer's portfolio website created with Vue.js and Vue Router
+## A clear designer's portfolio [website](https://kogrms.github.io/designer-portfolio/) created with Vue.js and Vue Router
 
 Showcase projects and work experience elegantly with smooth navigation and an engaging, responsive (desktop-only for now) user interface.
 
