@@ -1,3 +1,16 @@
+.cover-container {
+  position: absolute;
+  top: 17.5vh;
+  width: calc(100vw - 80px);
+  height: 41vh;
+  border-radius: 26px;
+  overflow: hidden;
+  background-image: url("../images/cover.png");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .navbar {
   position: relative;
   display: flex;

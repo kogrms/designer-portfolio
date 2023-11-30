@@ -21,32 +21,32 @@
   color: #FFFFFF;
 }
 
-.no-link {
+.no-link-job {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.7vw;
+  color: #3A3E49;
+  font-size: 1.9vw;
+  font-weight: 500;
+  line-height: 120%;
+  text-transform: uppercase;
+  text-decoration: none;
   cursor: auto;
 }
-.no-link:hover {
-  background-color: #4D5260;
+/* .no-link:hover {
+  border-radius: 1000px;
+  border: 1px solid #3A3E49;
+} */
+
+.job-title.hovered {
+  text-decoration: underline;
 }
 
-.job-title {
-  &.hovered {
-    text-decoration: underline;
-  }
-}
 .job-position {
   color: #A0ABC7;
   margin-left: 1.9vw;
   justify-self: flex-start;
-
-  &.hovered {
-    color: #BA87FA;
-  }
 }
-/* .job-time {
-  color: #A0ABC7;
-} */
-
-
-
-
-
+.job-position.hovered {
+  color: #BA87FA;
+}

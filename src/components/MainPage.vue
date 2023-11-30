@@ -20,6 +20,7 @@
             Contacts
           </button>
         </nav>
+        <div class="cover-container"></div>
         <img
           class="section-title-cover"
           src="../assets/images/daria_fedorenko.svg"
@@ -49,10 +50,10 @@
         <div class="tabs">
           <button
             class="tab"
-            :class="{ active: selectedTab === 'product' }"
-            @click="selectTab('product')"
+            :class="{ active: selectedTab === 'communication' }"
+            @click="selectTab('communication')"
           >
-            Продуктовые кейсы
+            коммуникационный дизайн
           </button>
           <button
             class="tab"
@@ -63,10 +64,10 @@
           </button>
           <button
             class="tab"
-            :class="{ active: selectedTab === 'communication' }"
-            @click="selectTab('communication')"
+            :class="{ active: selectedTab === 'product' }"
+            @click="selectTab('product')"
           >
-            коммуникационный дизайн
+            Продуктовые кейсы
           </button>
           <button
             class="tab"
@@ -166,19 +167,10 @@
           </div>
           <div class="job-time">2019-2021</div>
         </a>
-        <div
-          class="job no-link"
-          @mouseover="hoveredJobIndex = 3"
-          @mouseleave="hoveredJobIndex = null"
-        >
+        <div class="no-link-job">
           <div style="display: flex; justify-content: flex-start">
             <div class="job-title">фриланс</div>
-            <div
-              class="job-position"
-              :class="{ hovered: hoveredJobIndex === 3 }"
-            >
-              графический дизайнер
-            </div>
+            <div class="job-position">графический дизайнер</div>
           </div>
           <div class="job-time">2016-2018</div>
         </div>
@@ -254,7 +246,7 @@ export default {
   name: "MainPage",
   data() {
     return {
-      selectedTab: "product",
+      selectedTab: "communication",
       tabsCards: tabsCards,
       hoveredCard: null,
       hoveredContactIndex: null,
@@ -283,7 +275,7 @@ export default {
           heading: "Резюме",
           image: "1.png",
           hover: "4_hover.gif",
-          link: "https://drive.google.com/file/d/1AMLssnQscQ3dD2p0KXXOizaRh3WOiSB4/view?usp=sharing",
+          link: "https://ya-monstr-a-sho.notion.site/Fedorenko-Daria-33e5cc8edc2949fdab89ef533b9343d6?pvs=4",
         },
         {
           image: "5.png",

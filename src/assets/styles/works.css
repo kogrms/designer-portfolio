@@ -4,11 +4,9 @@
   justify-content: space-between;
   /* gap: auto; */
 }
-.tab {
-  &.active {
-    background: #3A3E49;
-    color: #FFF;
-  }
+.tab.active {
+  background: #3A3E49;
+  color: #FFF;
 }
 .cards {
   margin-top: 60px;

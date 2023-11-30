@@ -47,10 +47,9 @@
   background: rgba(255, 255, 255, 0.20);
   margin-left: 1.8vw;
   margin-right: 1.8vw;
-
-  &.copied {
-    border: solid 1px #27CF0C;
-  }
+}
+.email-paste.copied {
+  border: solid 1px #27CF0C;
 }
 .email-copied {
   color: #27CF0C;

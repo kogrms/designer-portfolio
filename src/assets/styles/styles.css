@@ -117,10 +117,10 @@ button:active {
   position: relative;
   background: #1C1F25;
   height: 100vh;
-  background-image: url("../images/cover.png");
+  /* background-image: url("../images/cover.png");
   background-position: bottom;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   padding-left: 40px;
 }
 .section-title-cover {
