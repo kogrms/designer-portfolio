@@ -219,14 +219,16 @@
                 class="contact-icon"
               />
               <img
-                v-if="contact.email && hoveredContactIndex === i"
+                v-if="
+                  contact.email && hoveredContactIndex === i && !isEmailCopied
+                "
                 :src="require('../assets/images/contact_copy.svg')"
                 class="contact-icon"
               />
               <img
                 v-if="contact.email && isEmailCopied"
                 :src="require('../assets/images/contact_arrow_copied.svg')"
-                class="contact-icon"
+                class="contact-icon-copied"
               />
             </div>
           </div>

@@ -36,6 +36,14 @@
   right: 1.27vw;
   bottom: 1.27vw;
 }
+.contact-icon-copied {
+  position: absolute;
+  width: 2.99vw;
+  height: 2.99vw;
+  right: 1.2vw;
+  bottom: 1.2vw;
+}
+
 .email-paste {
   margin-top: 20%;
   font-size: 1.2vw;
