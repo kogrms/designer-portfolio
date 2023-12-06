@@ -313,10 +313,26 @@ export default {
         );
       } else if (
         this.tabsCards[this.selectedTab][card].link &&
+        card === "redesign"
+      ) {
+        window.open(
+          "https://ya-monstr-a-sho.notion.site/5ea603c0b0a744d8bb3cdeac3db287b0",
+          "_blank"
+        );
+      } else if (
+        this.tabsCards[this.selectedTab][card].link &&
         card === "praktikum"
       ) {
         window.open(
-          "https://www.figma.com/proto/3FYrNVDzojQx9vdISixk6F/%D0%A0%D0%B5%D0%B4%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD-%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0-%D0%B0%D0%BF%D1%81%D0%B5%D0%B9%D0%BB%D0%B0?page-id=0%3A1&type=design&node-id=1-4489&viewport=471%2C660%2C0.1&t=MSG87jD9esXvpOTp-1&scaling=min-zoom&mode=design",
+          "https://ya-monstr-a-sho.notion.site/33005043efc84f6095d56e9eec02081a",
+          "_blank"
+        );
+      } else if (
+        this.tabsCards[this.selectedTab][card].link &&
+        card === "onboarding"
+      ) {
+        window.open(
+          "https://ya-monstr-a-sho.notion.site/4842dabbebb6423f8bba879dd2e096d7",
           "_blank"
         );
       } else {
